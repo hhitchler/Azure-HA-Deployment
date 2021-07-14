@@ -1,7 +1,8 @@
 **The Purpose of this template is to allow you to launch a second VM-Series into an existing resource group because the Azure Marketplace will not allow this.**   
 
 You will still be responsible for configuring your own Azure HA settings within the Azure Portal and the VM-Series firewall. Please refer to the VM-Series deployment guide for 9.0 for configuration details. [DEPLOYMENT GUIDE](https://docs.paloaltonetworks.com/vm-series/9-0/vm-series-deployment/set-up-the-vm-series-firewall-on-azure/configure-activepassive-ha-for-vm-series-firewall-on-azure.html)
-
+# prerequisite
+Create a public IP for the managment interface. The public IP must be a standard sku deployed in the availability zone that matches the zone the VM is going to be deployed in. Otherwise if a 'new" public IP is created as part of the template a basic sku is created. Availability zone support is not supported for basic skus 
 
 [<img src="http://azuredeploy.net/deploybutton.png"/>](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FPaloAltoNetworks%2FAzure-HA-Deployment%2Fmaster%2Fazuredeploy.json?token=AZoiWXZHIcxPcJG4iqbfyOUvHN1O8coUks5ahgGXwA%3D%3D)
 
